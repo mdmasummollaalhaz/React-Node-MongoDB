@@ -1,0 +1,13 @@
+.btn{
+    padding: 10px 10px;
+    width: 20%;
+    margin-bottom: 10px;
+}
+.btnSubmit{
+    padding: 10px 10px;
+    width: 20%;
+    cursor: pointer;
+    background-color: green;
+    border: 0px;
+    color: #fff;
+}
