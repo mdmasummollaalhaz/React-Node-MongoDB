@@ -1,37 +1,19 @@
 import React from 'react';
-import './Adduser.css';
-
-const Adduser = () => {
-    const handleAddUser = event =>{
-        event.preventDefault();
-        const name = event.target.name.value;
-        const email = event.target.email.value;
-
-        const user = {name, email}
-
-        // Send data to the server
-        fetch('http://localhost:6001/user', {
-            method: 'POST',
-            headers:{
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        })
-        .then(res => res.json())
-        .then(data =>{console.log('Success', data)})
-    }
+import './AddUser.css'
+const AddUser = () => {
+    
     return (
         <div>
-            <h1>Please add a new user</h1>
+            <h2>Please add a new User</h2>
             <form onSubmit={handleAddUser}>
-                <input className='btn' type="text" name="name" id="" placeholder='Name' required/>
+                <input className='btn' type="text" name="name" placeholder='Name' required />
                 <br />
-                <input className='btn' type="email" name="email" id="" placeholder='Email' required/>
+                <input className='btn' type="email" name="email" placeholder='Email' required />
                 <br />
-                <input className='btnSubmit' type="submit" value="Add new user" />
+                <input className='btnSubmit' type="submit" value="Add User" />
             </form>
         </div>
     );
 };
 
-export default Adduser;
+export default AddUser;
